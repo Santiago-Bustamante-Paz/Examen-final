@@ -48,12 +48,24 @@ class SinNumeros:
                 return True
             return False
 
-#jugador1(ConNumeros)=('Paco','X')
-jugador1=(ConNumeros,'Paco','X')
-jugador1.mostrar_tablero()
+jugador1=SinNumeros('Paco','X')
+nombre=True
+print(type(nombre))
 
 def main():
     turno=random.randint(0,1)
     numeros=input('Quiere que el tablero muestre numeros? (s/n)')
-    #if numeros=='s':
-    jugador
+    if numeros=='s':
+        nombre1=input('Jugador 1: ingrese su nombre: ')
+        jugador1=ConNumeros(nombre1,'X')
+        nombre2=input('Jugador 2: ingrese su nombre: ')
+        jugador2=ConNumeros(nombre2,'O')
+    elif numeros=='n':
+        nombre1=input('Jugador 1: ingrese su nombre: ')
+        jugador1=SinNumeros(nombre1,'X')
+        nombre2=input('Jugador 2: ingrese su nombre: ')
+        jugador2=SinNumeros(nombre2,'O')
+    while True:
+        jugador.actual=jugador1 if turno%2==0 else jugador2
+
+        
